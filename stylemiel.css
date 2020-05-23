@@ -1,0 +1,268 @@
+/* definition des polices personnalisees */
+
+
+
+
+@font-face {
+    font-family: 'porcelainregular';
+    src: url('polices/porcelain-webfont.woff2') format('woff2'),
+         url('polices/porcelain-webfont.woff') format('woff'),
+         url('polices/porcelain.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Dayrom';
+    src: url('polices/Dayrom.eot');
+    src: url('polices/Dayrom.eot?#iefix') format('embedded-opentype'),
+         url('polices/Dayrom.woff') format('woff'),
+         url('polices/Dayrom.svg#Dayrom') format('svg'),
+         url('polices/Dayrom.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+ /* elements principaux de la page */
+ 
+ body
+ {
+    background-color: white;
+    font-size: 1em;
+    font-family: 'trebuchet MS', verdana, georgia, sans-serif;
+    color: black;
+ }
+ 
+ #main_wrapper
+ {
+    width: 900px;
+    margin: auto;
+    z-index: 1;
+    margin-top: 3em; /* espace entre nav et haut banniere header */     
+ }
+ nav li, article h2, footer h2, p, #miel_bio 
+ {
+    font-family: Dayrom, sans-serif;
+    font-weight: normal;
+    text-transform: none;
+ }
+
+/* menu*/
+#menu /* caracteristiques du menu fixe */
+{
+    top: 0;    
+    width: 950px;
+    position: fixed;
+    left: 11em;
+    z-index: 2;
+    background-color: #ffffff;
+    height: 35px;
+}
+nav ul
+{
+    position: relative;
+    list-style-type: none;    
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    padding-top: 6px; /* position verticale */
+}
+nav a
+{
+    text-decoration: none;
+    color: black;        
+}
+
+a:hover
+{
+    color: red;
+    text-decoration: none;    
+}
+
+/* titre */
+header
+{
+    height: 220px;
+    border-radius: 8px;
+    background: url('images/banniere4.jpg') no-repeat;
+    position: relative;
+    box-shadow: 2px 5px 5px pink;
+}
+.bouton
+{
+    height: 25px;
+    position: absolute;
+    right: 35px;
+    bottom: 5px;
+    background: url('images/fond_degraderouge.png') repeat-x;
+    border: 1px solid rgb(242,168,0);
+    border-radius: 5px;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 3px 8px 1px 8px;
+    color: rgb(245,168,126);
+    text-decoration: none; 
+}
+
+header h1
+{
+   position: relative;
+   left: 160px;
+   top: 20px;
+   font-family: porcelainregular, sans-serif;
+   font-size: 4em;
+   color: #a03000;   
+}
+
+/* position articles */
+.produits_abeilles_a
+{
+    display: flex;
+    justify-content: space-around;  
+}
+#miel, #propolis
+{    
+    width: 400px;
+    line-height: 1.2em; /*interligne du p */
+}
+
+.produits_abeilles_b
+{
+    display: flex;
+    justify-content: space-around;      
+}
+#pollen, #gelee_royale
+{    
+    width: 400px;
+    line-height: 1.2em; /*interligne du p */
+}
+
+/* mise en page articles */
+
+#miel img , #propolis img , #pollen img , #gelee_royale img , #bienfaits img , #precautions img 
+{
+    float: left;
+    width: 160px;
+    height: 150px;
+    margin-right: 15px;  /* decolle le p de l'img */
+    border-radius: 10px 10px 10px 10px;
+    margin-top: 45px;
+}
+#miel p , #propolis p , #pollen p , #gelee_royale p ,#bienfaits p , #precautions p, #miel_bio p
+{
+    text-align: justify;
+}
+#miel h2,#propolis h2, #pollen h2, #gelee_royale h2 ,#bienfaits h2 ,#precautions h2, #miel_bio h2
+{
+    margin-top: 45px; /* place h2 sous nav quand le lien est utilisé */
+}
+
+/* mise en page article bio */
+#miel_bio
+{
+    width: 880px;
+    position: relative;
+    margin: auto;
+    background: linear-gradient(to top, rgba(253,213,144,0.8), rgba(253,213,144,0));
+    border-radius: 15px 15px 15px 15px;
+    border: 10px solid rgb(230,230,230);
+    line-height: 1.2em;
+    margin-top: 15px;
+    padding-left: 10px;
+}
+#miel_bio h2
+{
+    padding-top: 10px;
+}
+.alveole img 
+{
+    float: left;
+    width: 160px;
+    height: 150px;
+    margin-right: 10px;  /* decolle le p de l'img */
+    border-radius: 10px 10px 10px 10px;
+    padding-top: 45px;
+ }
+
+/* mise en page bienfaits precautions */
+.proprietes
+{
+    display: flex;
+    justify-content: space-around;
+}
+#bienfaits, #precautions
+{
+    display: inline-block;
+    width: 400px;
+    line-height: 1.2em; /*interligne du p */
+}
+
+
+/* mise en page choix */
+.choix
+{
+    width: 880px;
+    height: 40px;
+    margin-top: 30px;   
+    background: linear-gradient(to right, rgba(253,213,144,0), rgba(253,213,144,0.8));
+    border: 10px solid rgb(230,230,230);
+    border-radius: 10px 10px 10px 10px;
+    text-align: center;
+    padding-top: 5px;
+}
+.choix a
+{
+    color: #a03000;
+    font-size: 1.6em;
+    text-decoration: none;
+}
+.choix a:hover
+{    
+    color: red;
+    text-decoration: none;
+}
+/* barre retour haut de page  et fin footer*/
+.separateur
+{
+    background: url('images/separateur.png') no-repeat top;
+    padding-top: 25px;
+    position: relative;
+    top: 45px;
+    opacity: 0.5;    
+}
+.separateur img
+{
+    position: absolute;
+    top: 0;
+    left: 45%;
+ }
+
+footer
+{    
+    width: 870px;
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-around;
+}
+footer h2
+{
+    color: #a03000;
+    text-align: center;
+}
+#commerce, #contact
+{
+    border: 7px solid rgb(230,230,230);
+    width: 400px;
+    box-shadow: 6px 6px 0 rgb(230,230,230);
+    border-radius: 10px 10px 10px 10px;  
+}
+footer ul
+{
+   list-style-type: none;
+   height: 60px;   
+   display: flex;
+   justify-content: space-around;
+   padding-left: 0; 
+}
+
+
+
